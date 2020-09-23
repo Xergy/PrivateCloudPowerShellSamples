@@ -12,4 +12,4 @@ $VMMHosts = Get-SCVMHost | Out-GridView -Title "Select Hosts..." -OutputMode Mul
 
 $HostsFiltered = $VMMHosts | Select-Object -Property ComputerName,FullyQualifiedDomainName,DomainName,VMHostGroup,HostCluster,OverallState,ClusterNodeStatus,Description
 
-$HostsFiltered | Export-Csv -Path "VMMHosts.csv" -Force -NoTypeInformation
+$HostsFiltered | Export-Csv -Path "Servers.csv" -Force -NoTypeInformation
