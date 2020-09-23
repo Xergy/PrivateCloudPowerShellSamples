@@ -10,7 +10,8 @@ $Results = @()
 #$ProcessToCheck = "Spoolsv","svchost","System","NotePad"
 $ProcessToCheck = "NotePad"
 
-Foreach ($Server in $Servers) {
+Foreach ($Server in $Servers) {    
+    Write-Host "Processing $($Server.ComputerName)..."
 
     $RemoteScript = {
         Param($Server,$ProcessToCheck)
