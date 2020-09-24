@@ -82,4 +82,4 @@
             $Results += Invoke-Command -ComputerName $Server.ComputerName -ScriptBlock $RemoteScript | Select -Exclude PSComputerName,Runspace 
 
 
-            $JobsResults.Results | ogv
+            # $JobsResults.Results | ogv
