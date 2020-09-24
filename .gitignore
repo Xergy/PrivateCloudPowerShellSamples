@@ -5,6 +5,8 @@
 
 # My Stuff
 *.csv
+*.xml
+*.txt
 
 # User-specific files
 *.rsuser

@@ -44,8 +44,8 @@ Foreach ($Server in $Servers) {
 
     }
 
-    $Results += Invoke-Command -ComputerName $Server.FullyQualifiedDomainName -ScriptBlock $RemoteScript -ArgumentList $Server, $ProcessToCheck | 
-        Select-Object * -ExcludeProperty PSComputerName,RunspaceId 
+    $Results += Invoke-Command -ComputerName $Server.FullyQualifiedDomainName -ScriptBlock $RemoteScript -ArgumentList $Server, $ProcessToCheck #| 
+        # Select-Object * -ExcludeProperty PSComputerName,RunspaceId # Didn't in Prod        
 }
 
 $NowString = (get-date -Format s) -replace ":","."
